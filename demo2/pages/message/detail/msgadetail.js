@@ -26,6 +26,20 @@ Page({
 
   },
 
+  goback: function () {
+
+    let city = '你好';
+    let id = 1;
+    let pages = getCurrentPages()
+    let prePage = pages[pages.length - 2]  //上一个界面
+    prePage.setData({
+      addresCon: city,
+      cityid: id
+    })
+    wx.navigateBack({});//返回上一页
+
+  },
+
   /**
    * 生命周期函数--监听页面显示
    */
